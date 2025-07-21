@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interrogas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div class="home-container" id="homePage">
+        <div class="home-content">
+            <h1 class="title">Interrogas</h1>
+            <button class="start-btn" id="startBtn">COMEÇAR!</button>
+        </div>
+        <img class="dea-img" src="imgs/Dea/Dea_home.png" alt="Dea na tela inicial">
+    </div>
+
+    <!-- Game Page -->
+    <div class="game-container" id="gamePage">
+        <h2 class="question">Qual é o tempo de recarga desta habilidade?</h2>
+        <div class="ability-icon">?</div>
+        <input type="number" class="answer-input" id="answerInput" placeholder="Digite em segundos...">
+        <button class="submit-btn" id="submitBtn">Enviar</button>
+
+        <div class="result-container" id="resultContainer">
+            <img class="result-image" id="resultImage" src="" alt="">
+            <p class="result-message" id="resultMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
