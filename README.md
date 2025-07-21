@@ -5,8 +5,8 @@
 
 ## ✨ Sobre o projeto
 
-**Interrogas** é um projeto em construção que traz um quiz sobre o jogo League of Legends. Uma maneira orgânica de gravar informações importante pra quem joga. A motivação é aprender o que não sei e ensinar o que estudo.
-Mirando sempre na simpliscidade. 
+**Interrogas** é um projeto em construção que traz um quiz sobre o jogo League of Legends. Uma maneira orgânica de gravar informações importantes para quem joga. A motivação é aprender o que não sei e ensinar o que estudo.
+Mirando sempre na simpliscidade; fazendo sempre com prazer.
 
 ## 🔍 Funcionalidades
 
