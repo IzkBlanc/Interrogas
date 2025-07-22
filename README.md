@@ -13,7 +13,7 @@ Mirando sempre na simpliscidade; fazendo sempre com prazer.
 - Exibe perguntas específicas sobre campeões;
 - Mostra se sua resposta está certa ou errada.
 - Visual limpo e focado na experiência do usuário.
-- ⚠️ No momento, apenas a campeã **Ahri** está disponível.
+- ⚠️ No momento, apenas os campeões  **Ahri**,**Akali**,**Zed** e **Lux** estão disponíveis.
 
 ## 🔧 Tecnologias utilizadas
 
