@@ -8,11 +8,20 @@ const champions = [
             { key: "E", name: "Encanto", cooldown: 12, img: "imgs/Icones_skills/Ahri_E.png" },
             { key: "R", name: "Ímpeto Espiritual", cooldown: 130, img: "imgs/Icones_skills/Ahri_R.png" }
         ]
+    },
+    {        
+        name: "Lux",
+        skills: [
+            { key: "Q", name: "Luz Ofuscante", cooldown: 10, img: "imgs/Icones_skills/Lux_Q.png" },
+            { key: "W", name: "Brilho Radiante", cooldown: 8, img: "imgs/Icones_skills/Lux_W.png" },
+            { key: "E", name: "Explosão de Luz", cooldown: 12, img: "imgs/Icones_skills/Lux_E.png" },
+            { key: "R", name: "Luz Final", cooldown: 120, img: "imgs/Icones_skills/Lux_R.png" }
+        ]
     }
-    // futuros campeões podem ser adicionados aqui
+    // Adicione outros campeões aqui
 ];
 
-// Elementos HTML que serão manipulados
+// Elementos HTML
 const homePage = document.getElementById('homePage');
 const gamePage = document.getElementById('gamePage');
 const startBtn = document.getElementById('startBtn');
@@ -25,6 +34,7 @@ const abilityIcon = document.querySelector('.ability-icon');
 const question = document.querySelector('.question');
 
 let currentChampion, currentSkill;
+let askedSkills = []; // Array para guardar os índices das skills já perguntadas
 
 // Inicia o jogo
 startBtn.addEventListener('click', () => {
@@ -32,16 +42,27 @@ startBtn.addEventListener('click', () => {
     gamePage.style.display = 'flex';
     startNewRound();
 });
-//  Liga o botão "Enviar" à verificação da resposta
+
 submitBtn.addEventListener('click', checkAnswer);
-//  Também permite que o jogador pressione Enter para enviar a resposta
 answerInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') checkAnswer();
 });
 
 function startNewRound() {
-    currentChampion = champions[Math.floor(Math.random() * champions.length)];
-    currentSkill = currentChampion.skills[Math.floor(Math.random() * currentChampion.skills.length)];
+    // Se não tem campeão selecionado ou todas skills já foram perguntadas, muda de campeão
+    if (!currentChampion || askedSkills.length === currentChampion.skills.length) {
+        currentChampion = champions[Math.floor(Math.random() * champions.length)];
+        askedSkills = [];
+    }
+
+    // Seleciona as skills que ainda não foram perguntadas
+    const remainingSkills = currentChampion.skills
+        .map((skill, i) => ({ skill, index: i }))
+        .filter(({ index }) => !askedSkills.includes(index));
+    const randomSkillObj = remainingSkills[Math.floor(Math.random() * remainingSkills.length)];
+    currentSkill = randomSkillObj.skill;
+    askedSkills.push(randomSkillObj.index);
+
     abilityIcon.innerHTML = `<img src="${currentSkill.img}" alt="${currentChampion.name} ${currentSkill.key}" style="height:48px;">`;
     question.textContent = `Qual o tempo de recarga do (${currentSkill.key}) do(a) ${currentChampion.name}?`;
     answerInput.value = '';
