@@ -9,10 +9,10 @@ const champions = [
             { key: "R", name: "Ímpeto Espiritual", cooldown: 130, img: "imgs/Icones_skills/Ahri_R.png" }
         ]
     }
-    // Adicione outros campeões aqui
+    // futuros campeões podem ser adicionados aqui
 ];
 
-// Elementos HTML
+// Elementos HTML que serão manipulados
 const homePage = document.getElementById('homePage');
 const gamePage = document.getElementById('gamePage');
 const startBtn = document.getElementById('startBtn');
@@ -32,8 +32,9 @@ startBtn.addEventListener('click', () => {
     gamePage.style.display = 'flex';
     startNewRound();
 });
-
+//  Liga o botão "Enviar" à verificação da resposta
 submitBtn.addEventListener('click', checkAnswer);
+//  Também permite que o jogador pressione Enter para enviar a resposta
 answerInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') checkAnswer();
 });

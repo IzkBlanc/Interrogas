@@ -16,7 +16,7 @@
             padding: 20px;
         }
         
-        /* Home Page Styles */
+        /* Home Page css */
         .home-container {
             display: flex;
             max-width: 1000px;
@@ -64,7 +64,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
-        /* Game Page Styles */
+        /* css da página do jogo */
         .game-container {
             display: none;
             flex-direction: column;
@@ -123,7 +123,7 @@
             background-color: #3aa371;
         }
         
-        /* Result Styles */
+        /*resultados*/
         .result-container {
             display: none;
             align-items: center;
@@ -141,7 +141,7 @@
             max-width: 300px;
         }
         
-        /* Responsive Styles */
+        
         @media (max-width: 768px) {
             .home-container {
                 flex-direction: column;
