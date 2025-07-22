@@ -33,14 +33,16 @@ const resultMessage = document.getElementById('resultMessage');
 const abilityIcon = document.querySelector('.ability-icon');
 const question = document.querySelector('.question');
 
-let currentChampion, currentSkill;
-let askedSkills = []; // Array para guardar os índices das skills já perguntadas
+let currentChampionIndex = null;
+let currentChampion = null;
+let currentSkill = null;
+let askedSkills = [];
 
 // Inicia o jogo
 startBtn.addEventListener('click', () => {
     homePage.style.display = 'none';
     gamePage.style.display = 'flex';
-    startNewRound();
+    startNewChampion();
 });
 
 submitBtn.addEventListener('click', checkAnswer);
@@ -48,14 +50,27 @@ answerInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') checkAnswer();
 });
 
+function startNewChampion() {
+    // Seleciona um campeão diferente do anterior
+    let nextChampionIndex;
+    do {
+        nextChampionIndex = Math.floor(Math.random() * champions.length);
+    } while (nextChampionIndex === currentChampionIndex && champions.length > 1);
+
+    currentChampionIndex = nextChampionIndex;
+    currentChampion = champions[currentChampionIndex];
+    askedSkills = [];
+    startNewRound();
+}
+
 function startNewRound() {
-    // Se não tem campeão selecionado ou todas skills já foram perguntadas, muda de campeão
-    if (!currentChampion || askedSkills.length === currentChampion.skills.length) {
-        currentChampion = champions[Math.floor(Math.random() * champions.length)];
-        askedSkills = [];
+    // Se todas as skills já foram perguntadas, troca de campeão
+    if (askedSkills.length === currentChampion.skills.length) {
+        startNewChampion();
+        return;
     }
 
-    // Seleciona as skills que ainda não foram perguntadas
+    // Seleciona uma skill ainda não perguntada
     const remainingSkills = currentChampion.skills
         .map((skill, i) => ({ skill, index: i }))
         .filter(({ index }) => !askedSkills.includes(index));
