@@ -12,10 +12,10 @@ const champions = [
     {        
         name: "Lux",
         skills: [
-            { key: "Q", name: "Luz Ofuscante", cooldown: 10, img: "imgs/Icones_skills/Lux_Q.png" },
-            { key: "W", name: "Brilho Radiante", cooldown: 8, img: "imgs/Icones_skills/Lux_W.png" },
-            { key: "E", name: "Explosão de Luz", cooldown: 12, img: "imgs/Icones_skills/Lux_E.png" },
-            { key: "R", name: "Luz Final", cooldown: 120, img: "imgs/Icones_skills/Lux_R.png" }
+            { key: "Q", name: "Ligação da luz", cooldown: 10, img: "imgs/Icones_skills/Lux_Q.png" },
+            { key: "W", name: "Barreira prismática", cooldown: 8, img: "imgs/Icones_skills/Lux_W.png" },
+            { key: "E", name: "Singularidade lucente", cooldown: 12, img: "imgs/Icones_skills/Lux_E.png" },
+            { key: "R", name: "Centelha final", cooldown: 120, img: "imgs/Icones_skills/Lux_R.png" }
         ]
     }
     // Adicione outros campeões aqui
