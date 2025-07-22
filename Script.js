@@ -1,4 +1,4 @@
-// Lista de campeões e habilidades (Ahri como exemplo)
+// Lista de campeões e habilidades
 const champions = [
     {
         name: "Ahri",
@@ -9,7 +9,25 @@ const champions = [
             { key: "R", name: "Ímpeto Espiritual", cooldown: 130, img: "imgs/Icones_skills/Ahri_R.png" }
         ]
     },
-    {        
+    {
+        name: "Akali",
+        skills: [
+            { key: "Q", name: "Golpe dos cinco pontos", cooldown: 1.5, img: "imgs/Icones_skills/Akali_Q.png" },
+            { key: "W", name: "Cortina de Fumaça", cooldown: 20, img: "imgs/Icones_skills/Akali_W.png" },
+            { key: "E", name: "Ataque da Sombra", cooldown: 16, img: "imgs/Icones_skills/Akali_E.png" },
+            { key: "R", name: "Marca do Assassino", cooldown: 120, img: "imgs/Icones_skills/Akali_R.png" }
+        ]
+    },
+    {
+        name: "Zed",
+        skills: [
+            { key: "Q", name: "Shuriken laminado", cooldown: 6, img: "imgs/Icones_skills/Zed_Q.png" },
+            { key: "W", name: "Sombra Viva", cooldown: 20, img: "imgs/Icones_skills/Zed_W.png" },
+            { key: "E", name: "Corte sombrio", cooldown: 5, img: "imgs/Icones_skills/Zed_E.png" },
+            { key: "R", name: "Marca da Morte", cooldown: 120, img: "imgs/Icones_skills/Zed_R.png" }
+        ]
+    },
+    {
         name: "Lux",
         skills: [
             { key: "Q", name: "Ligação da luz", cooldown: 10, img: "imgs/Icones_skills/Lux_Q.png" },
@@ -18,7 +36,6 @@ const champions = [
             { key: "R", name: "Centelha final", cooldown: 120, img: "imgs/Icones_skills/Lux_R.png" }
         ]
     }
-    // Adicione outros campeões aqui
 ];
 
 // Elementos HTML
@@ -33,10 +50,11 @@ const resultMessage = document.getElementById('resultMessage');
 const abilityIcon = document.querySelector('.ability-icon');
 const question = document.querySelector('.question');
 
+// Progresso de cada campeão
+let championProgress = champions.map(() => []);
 let currentChampionIndex = null;
 let currentChampion = null;
 let currentSkill = null;
-let askedSkills = [];
 
 // Inicia o jogo
 startBtn.addEventListener('click', () => {
@@ -51,20 +69,33 @@ answerInput.addEventListener('keypress', (e) => {
 });
 
 function startNewChampion() {
-    // Seleciona um campeão diferente do anterior
+    // Filtra campeões que ainda têm skills não perguntadas
+    const availableChampionIndexes = championProgress
+        .map((skills, idx) => skills.length < champions[idx].skills.length ? idx : null)
+        .filter(idx => idx !== null);
+
+    // Se todos os campeões já foram, reinicia o progresso
+    if (availableChampionIndexes.length === 0) {
+        championProgress = champions.map(() => []);
+        startNewChampion();
+        return;
+    }
+
+    // Sorteia entre os campeões disponíveis
     let nextChampionIndex;
     do {
-        nextChampionIndex = Math.floor(Math.random() * champions.length);
-    } while (nextChampionIndex === currentChampionIndex && champions.length > 1);
+        nextChampionIndex = availableChampionIndexes[Math.floor(Math.random() * availableChampionIndexes.length)];
+    } while (nextChampionIndex === currentChampionIndex && availableChampionIndexes.length > 1);
 
     currentChampionIndex = nextChampionIndex;
     currentChampion = champions[currentChampionIndex];
-    askedSkills = [];
     startNewRound();
 }
 
 function startNewRound() {
-    // Se todas as skills já foram perguntadas, troca de campeão
+    const askedSkills = championProgress[currentChampionIndex];
+
+    // Se todas as skills já foram perguntadas desse campeão, troca de campeão
     if (askedSkills.length === currentChampion.skills.length) {
         startNewChampion();
         return;
@@ -86,13 +117,16 @@ function startNewRound() {
 }
 
 function checkAnswer() {
-    const userAnswer = parseInt(answerInput.value);
+    // Aceita ponto ou vírgula como separador decimal
+    const userAnswer = parseFloat(answerInput.value.replace(',', '.'));
     if (isNaN(userAnswer)) {
         alert("Por favor, insira um número válido!");
         return;
     }
 
-    if (userAnswer === currentSkill.cooldown) {
+    // Margem de erro para comparação de decimais
+    const epsilon = 0.01;
+    if (Math.abs(userAnswer - currentSkill.cooldown) < epsilon) {
         resultImage.src = "imgs/Dea/Dea_Feliz.png";
         resultImage.alt = "Dea feliz";
         resultMessage.textContent = "Parabéns, você acertou!";
