@@ -35,6 +35,24 @@ const champions = [
             { key: "E", name: "Singularidade lucente", cooldown: 12, img: "imgs/Icones_skills/Lux_E.png" },
             { key: "R", name: "Centelha final", cooldown: 120, img: "imgs/Icones_skills/Lux_R.png" }
         ]
+    },
+    {
+        name: "Akshan",
+        skills: [
+            { key: "Q", name: "Bumerangue vingativo", cooldown: 8, img: "imgs/Icones_skills/Akshan_Q.png" },
+            { key: "W", name: "Rebeldia", cooldown: 18, img: "imgs/Icones_skills/Akshan_W.png" },
+            { key: "E", name: "Impulso heórico", cooldown: 18, img: "imgs/Icones_skills/Akshan_E.png" },
+            { key: "R", name: "punição", cooldown: 100, img: "imgs/Icones_skills/Akshan_R.png" }
+        ]
+    },
+    {
+        name: "Anivia",
+        skills: [
+            { key: "Q", name: "Lampejo gelado", cooldown: 12, img: "imgs/Icones_skills/Anivia_Q.png" },
+            { key: "W", name: "Cristalizar", cooldown: 17, img: "imgs/Icones_skills/Anivia_W.png" },
+            { key: "E", name: "Congelamento", cooldown: 4, img: "imgs/Icones_skills/Anivia_E.png" },
+            { key: "R", name: "Tempestade glacial", cooldown: 4, img: "imgs/Icones_skills/Anivia_R.png" }
+        ]
     }
 ];
 
