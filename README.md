@@ -21,7 +21,7 @@ Projeto desenvolvido com:
 
 - HTML5
 - CSS3
-- JavaScript puro (Vanilla JS)
+- JavaScript
 
 ## 🚧 Em construção
 
@@ -38,6 +38,5 @@ Acesse o projeto online:
 
 🚧 Projeto em fase inicial  
 🔜 Muitas melhorias estão por vir
-Eu mesmo estou em fase inicial :)
 ---
 
