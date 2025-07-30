@@ -55,7 +55,7 @@ const champions = [
         ]
     },
     {
-      Name: "Aurora",
+      name: "Aurora",
       skills: [
         { key: "Q", name: "Feitiço dúplice", cooldown: 9, img: "imgs/Icones_skills/Aurora_Q.png" },
         { key: "W", name: "Através do véu", cooldown: 22, img: "imgs/Icones_skills/Aurora_W.png" },
