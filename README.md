@@ -13,7 +13,7 @@ Mirando sempre na simpliscidade; fazendo sempre com prazer.
 - Exibe perguntas específicas sobre campeões;
 - Mostra se sua resposta está certa ou errada.
 - Visual limpo e focado na experiência do usuário.
-- ⚠️ No momento, apenas alguns campeões estão disponível = 6. Mais recentes: Anivia e Akshan.
+- ⚠️ No momento, apenas alguns campeões estão disponível = 6. Mais recente: Aurora
 
 ## 🔧 Tecnologias utilizadas
 
