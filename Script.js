@@ -53,6 +53,15 @@ const champions = [
             { key: "E", name: "Congelamento", cooldown: 4, img: "imgs/Icones_skills/Anivia_E.png" },
             { key: "R", name: "Tempestade glacial", cooldown: 4, img: "imgs/Icones_skills/Anivia_R.png" }
         ]
+    },
+    {
+      Name: "Aurora",
+      skills: [
+        { key: "Q", name: "Feitiço dúplice", cooldown: 9, img: "imgs/Icones_skills/Aurora_Q.png" },
+        { key: "W", name: "Através do véu", cooldown: 22, img: "imgs/Icones_skills/Aurora_W.png" },
+        { key: "E", name: "Estranheza", cooldown: 15, img: "imgs/Icones_skills/Aurora_E.png" },
+        { key: "R", name: "Entre mundos", cooldown: 140, img: "imgs/Icones_skills/Aurora_R.png" }
+        ]
     }
 ];
 
@@ -127,7 +136,7 @@ function startNewRound() {
     currentSkill = randomSkillObj.skill;
     askedSkills.push(randomSkillObj.index);
 
-    abilityIcon.innerHTML = `<img src="${currentSkill.img}" alt="${currentChampion.name} ${currentSkill.key}" style="height:48px;">`;
+    abilityIcon.innerHTML = `<img src="${currentSkill.img}" alt="${currentChampion.name} ${currentSkill.key}" style="height:48px;" loading="lazy">`;
     question.textContent = `Qual o tempo de recarga do (${currentSkill.key}) do(a) ${currentChampion.name}?`;
     answerInput.value = '';
     resultContainer.style.display = 'none';
