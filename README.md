@@ -37,6 +37,6 @@ Acesse o projeto online:
 ## 📌 Status
 
 🚧 Projeto em fase inicial  
-🔜 Muitas melhorias estão por vir
+🔜 Muitas melhorias estão por vir... ou nem tantas assim. Mas vem coisa
 ---
 
