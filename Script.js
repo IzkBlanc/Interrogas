@@ -1,7 +1,8 @@
-// Lista de campeões e habilidades
+
 const champions = [
     {
         name: "Ahri",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Ahri_AfterHoursSpiritBlossomSpringsSkin_HD.jpg/1920px-Ahri_AfterHoursSpiritBlossomSpringsSkin_HD.jpg?8cfc3",
         skills: [
             { key: "Q", name: "Orbe da Ilusão", cooldown: 7, img: "imgs/Icones_skills/Ahri_Q.png" },
             { key: "W", name: "Fogo de Raposa", cooldown: 9, img: "imgs/Icones_skills/Ahri_W.png" },
@@ -11,6 +12,7 @@ const champions = [
     },
     {
         name: "Akali",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Akali_PrestigeCovenSkin_HD.jpg/800px-Akali_PrestigeCovenSkin_HD.jpg?f7a9d&20241125005300",
         skills: [
             { key: "Q", name: "Golpe dos cinco pontos", cooldown: 1.5, img: "imgs/Icones_skills/Akali_Q.png" },
             { key: "W", name: "Cortina de Fumaça", cooldown: 20, img: "imgs/Icones_skills/Akali_W.png" },
@@ -20,6 +22,7 @@ const champions = [
     },
     {
         name: "Zed",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Zed_GalaxySlayerSkin_HD.jpg/800px-Zed_GalaxySlayerSkin_HD.jpg?2eeca&20241125055513",
         skills: [
             { key: "Q", name: "Shuriken laminado", cooldown: 6, img: "imgs/Icones_skills/Zed_Q.png" },
             { key: "W", name: "Sombra Viva", cooldown: 20, img: "imgs/Icones_skills/Zed_W.png" },
@@ -29,6 +32,7 @@ const champions = [
     },
     {
         name: "Lux",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/Lux_CosmicSkin_HD.jpg?d0787",
         skills: [
             { key: "Q", name: "Ligação da luz", cooldown: 10, img: "imgs/Icones_skills/Lux_Q.png" },
             { key: "W", name: "Barreira prismática", cooldown: 8, img: "imgs/Icones_skills/Lux_W.png" },
@@ -38,6 +42,7 @@ const champions = [
     },
     {
         name: "Akshan",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Akshan_ThreeHonorsSkin_HD.jpg/800px-Akshan_ThreeHonorsSkin_HD.jpg?61e1c&20241125184657",
         skills: [
             { key: "Q", name: "Bumerangue vingativo", cooldown: 8, img: "imgs/Icones_skills/Akshan_Q.png" },
             { key: "W", name: "Rebeldia", cooldown: 18, img: "imgs/Icones_skills/Akshan_W.png" },
@@ -47,6 +52,7 @@ const champions = [
     },
     {
         name: "Anivia",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Anivia_VictoriousSkin_HD.jpg/800px-Anivia_VictoriousSkin_HD.jpg?fa11d&20241125040708",
         skills: [
             { key: "Q", name: "Lampejo gelado", cooldown: 12, img: "imgs/Icones_skills/Anivia_Q.png" },
             { key: "W", name: "Cristalizar", cooldown: 17, img: "imgs/Icones_skills/Anivia_W.png" },
@@ -55,12 +61,13 @@ const champions = [
         ]
     },
     {
-      name: "Aurora",
-      skills: [
-        { key: "Q", name: "Feitiço dúplice", cooldown: 9, img: "imgs/Icones_skills/Aurora_Q.png" },
-        { key: "W", name: "Através do véu", cooldown: 22, img: "imgs/Icones_skills/Aurora_W.png" },
-        { key: "E", name: "Estranheza", cooldown: 15, img: "imgs/Icones_skills/Aurora_E.png" },
-        { key: "R", name: "Entre mundos", cooldown: 140, img: "imgs/Icones_skills/Aurora_R.png" }
+        name: "Aurora",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Aurora_BattleBunnySkin_HD.jpg/800px-Aurora_BattleBunnySkin_HD.jpg?3e891&20241125185913",
+        skills: [
+            { key: "Q", name: "Feitiço dúplice", cooldown: 9, img: "imgs/Icones_skills/Aurora_Q.png" },
+            { key: "W", name: "Através do véu", cooldown: 22, img: "imgs/Icones_skills/Aurora_W.png" },
+            { key: "E", name: "Estranheza", cooldown: 15, img: "imgs/Icones_skills/Aurora_E.png" },
+            { key: "R", name: "Entre mundos", cooldown: 140, img: "imgs/Icones_skills/Aurora_R.png" }
         ]
     }
 ];
@@ -76,6 +83,7 @@ const resultImage = document.getElementById('resultImage');
 const resultMessage = document.getElementById('resultMessage');
 const abilityIcon = document.querySelector('.ability-icon');
 const question = document.querySelector('.question');
+const champBg = document.getElementById('champBg');
 
 // Progresso de cada campeão
 let championProgress = champions.map(() => []);
@@ -116,6 +124,7 @@ function startNewChampion() {
 
     currentChampionIndex = nextChampionIndex;
     currentChampion = champions[currentChampionIndex];
+    champBg.src = currentChampion.splash; 
     startNewRound();
 }
 
@@ -165,6 +174,6 @@ function checkAnswer() {
         resultMessage.style.color = "#f04747";
     }
 
-    resultContainer.style.display = 'flex';
-    setTimeout(startNewRound, 3000);
-}
+        resultContainer.style.display = 'flex';
+        setTimeout(startNewRound, 1500);
+    }

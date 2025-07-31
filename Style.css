@@ -65,7 +65,8 @@
         
         /* css da página do jogo */
         .game-container {
-            display: none;
+            position: relative;
+            display: flex;
             flex-direction: column;
             align-items: center;
             gap: 40px;
@@ -75,6 +76,25 @@
             background-color: #36393f;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .champ-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(2px);
+            opacity: 0.8; 
+            pointer-events: none;
+            border-radius: 20px;
+            z-index: 0;
+            transition: none;
+        }
+        .game-container > *:not(.champ-bg) {
+            position: relative;
+            z-index: 1;
+
         }
         
         .question {
