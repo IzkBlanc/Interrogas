@@ -69,6 +69,16 @@ const champions = [
             { key: "E", name: "Estranheza", cooldown: 15, img: "imgs/Icones_skills/Aurora_E.png" },
             { key: "R", name: "Entre mundos", cooldown: 140, img: "imgs/Icones_skills/Aurora_R.png" }
         ]
+    },
+    {
+        name: "Katarina",
+        splash: "https://wiki.leagueoflegends.com/en-us/images/Katarina_PrestigeMasqueoftheBlackRoseSkin.jpg?85ab0",
+        skills: [
+            { key: "Q", name: "lâmina saltitante", cooldown: 11, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/KatarinaQ.png" },
+            { key: "W", name: "preparação", cooldown: 15, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/KatarinaW.png" },
+            { key: "E", name: "shunpo", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/KatarinaEWrapper.png" },
+            { key: "R", name: "lótus da morte", cooldown: 75, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/KatarinaR.png" }
+        ]
     }
 ];
 
