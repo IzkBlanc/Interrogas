@@ -4,70 +4,70 @@ const champions = [
         name: "Ahri",
         splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Ahri_AfterHoursSpiritBlossomSpringsSkin_HD.jpg/1920px-Ahri_AfterHoursSpiritBlossomSpringsSkin_HD.jpg?8cfc3",
         skills: [
-            { key: "Q", name: "Orbe da Ilusão", cooldown: 7, img: "imgs/Icones_skills/Ahri_Q.png" },
-            { key: "W", name: "Fogo de Raposa", cooldown: 9, img: "imgs/Icones_skills/Ahri_W.png" },
-            { key: "E", name: "Encanto", cooldown: 12, img: "imgs/Icones_skills/Ahri_E.png" },
-            { key: "R", name: "Ímpeto Espiritual", cooldown: 130, img: "imgs/Icones_skills/Ahri_R.png" }
+            { key: "Q", name: "Orbe da Ilusão", cooldown: 7, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AhriQ.png" },
+            { key: "W", name: "Fogo de Raposa", cooldown: 9, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AhriW.png" },
+            { key: "E", name: "Encanto", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AhriE.png" },
+            { key: "R", name: "Ímpeto Espiritual", cooldown: 130, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AhriR.png" }
         ]
     },
     {
         name: "Akali",
         splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Akali_PrestigeCovenSkin_HD.jpg/800px-Akali_PrestigeCovenSkin_HD.jpg?f7a9d&20241125005300",
         skills: [
-            { key: "Q", name: "Golpe dos cinco pontos", cooldown: 1.5, img: "imgs/Icones_skills/Akali_Q.png" },
-            { key: "W", name: "Cortina de Fumaça", cooldown: 20, img: "imgs/Icones_skills/Akali_W.png" },
-            { key: "E", name: "Ataque da Sombra", cooldown: 16, img: "imgs/Icones_skills/Akali_E.png" },
-            { key: "R", name: "Marca do Assassino", cooldown: 120, img: "imgs/Icones_skills/Akali_R.png" }
+            { key: "Q", name: "Golpe dos cinco pontos", cooldown: 1.5, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkaliQ.png" },
+            { key: "W", name: "Cortina de Fumaça", cooldown: 20, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkaliW.png" },
+            { key: "E", name: "Ataque da Sombra", cooldown: 16, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkaliE.png" },
+            { key: "R", name: "execução perfeita", cooldown: 120, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkaliR.png" }
         ]
     },
     {
         name: "Zed",
         splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Zed_GalaxySlayerSkin_HD.jpg/800px-Zed_GalaxySlayerSkin_HD.jpg?2eeca&20241125055513",
         skills: [
-            { key: "Q", name: "Shuriken laminado", cooldown: 6, img: "imgs/Icones_skills/Zed_Q.png" },
-            { key: "W", name: "Sombra Viva", cooldown: 20, img: "imgs/Icones_skills/Zed_W.png" },
-            { key: "E", name: "Corte sombrio", cooldown: 5, img: "imgs/Icones_skills/Zed_E.png" },
-            { key: "R", name: "Marca da Morte", cooldown: 120, img: "imgs/Icones_skills/Zed_R.png" }
+            { key: "Q", name: "Shuriken laminado", cooldown: 6, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZedQ.png" },
+            { key: "W", name: "Sombra Viva", cooldown: 20, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZedW.png" },
+            { key: "E", name: "Corte sombrio", cooldown: 5, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZedE.png" },
+            { key: "R", name: "Marca da Morte", cooldown: 120, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZedR.png" }
         ]
     },
     {
         name: "Lux",
         splash: "https://wiki.leagueoflegends.com/en-us/images/Lux_CosmicSkin_HD.jpg?d0787",
         skills: [
-            { key: "Q", name: "Ligação da luz", cooldown: 10, img: "imgs/Icones_skills/Lux_Q.png" },
-            { key: "W", name: "Barreira prismática", cooldown: 8, img: "imgs/Icones_skills/Lux_W.png" },
-            { key: "E", name: "Singularidade lucente", cooldown: 12, img: "imgs/Icones_skills/Lux_E.png" },
-            { key: "R", name: "Centelha final", cooldown: 120, img: "imgs/Icones_skills/Lux_R.png" }
+            { key: "Q", name: "Ligação da luz", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/LuxLightBinding.png" },
+            { key: "W", name: "Barreira prismática", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/LuxPrismaticWave.png" },
+            { key: "E", name: "Singularidade lucente", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/LuxLightStrikeKugel.png" },
+            { key: "R", name: "Centelha final", cooldown: 120, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/LuxR.png" }
         ]
     },
     {
         name: "Akshan",
         splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Akshan_ThreeHonorsSkin_HD.jpg/800px-Akshan_ThreeHonorsSkin_HD.jpg?61e1c&20241125184657",
         skills: [
-            { key: "Q", name: "Bumerangue vingativo", cooldown: 8, img: "imgs/Icones_skills/Akshan_Q.png" },
-            { key: "W", name: "Rebeldia", cooldown: 18, img: "imgs/Icones_skills/Akshan_W.png" },
-            { key: "E", name: "Impulso heórico", cooldown: 18, img: "imgs/Icones_skills/Akshan_E.png" },
-            { key: "R", name: "punição", cooldown: 100, img: "imgs/Icones_skills/Akshan_R.png" }
+            { key: "Q", name: "Bumerangue vingativo", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkshanQ.png" },
+            { key: "W", name: "Rebeldia", cooldown: 18, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkshanW.png" },
+            { key: "E", name: "Impulso heórico", cooldown: 18, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkshanE.png" },
+            { key: "R", name: "punição", cooldown: 100, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AkshanR.png" }
         ]
     },
     {
         name: "Anivia",
         splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Anivia_VictoriousSkin_HD.jpg/800px-Anivia_VictoriousSkin_HD.jpg?fa11d&20241125040708",
         skills: [
-            { key: "Q", name: "Lampejo gelado", cooldown: 12, img: "imgs/Icones_skills/Anivia_Q.png" },
-            { key: "W", name: "Cristalizar", cooldown: 17, img: "imgs/Icones_skills/Anivia_W.png" },
-            { key: "E", name: "Congelamento", cooldown: 4, img: "imgs/Icones_skills/Anivia_E.png" },
-            { key: "R", name: "Tempestade glacial", cooldown: 4, img: "imgs/Icones_skills/Anivia_R.png" }
+            { key: "Q", name: "Lampejo gelado", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/FlashFrost.png" },
+            { key: "W", name: "Cristalizar", cooldown: 17, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/Crystallize.png" },
+            { key: "E", name: "Congelamento", cooldown: 4, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/Frostbite.png" },
+            { key: "R", name: "Tempestade glacial", cooldown: 4, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/GlacialStorm.png" }
         ]
     },
     {
         name: "Aurora",
         splash: "https://wiki.leagueoflegends.com/en-us/images/thumb/Aurora_BattleBunnySkin_HD.jpg/800px-Aurora_BattleBunnySkin_HD.jpg?3e891&20241125185913",
         skills: [
-            { key: "Q", name: "Feitiço dúplice", cooldown: 9, img: "imgs/Icones_skills/Aurora_Q.png" },
-            { key: "W", name: "Através do véu", cooldown: 22, img: "imgs/Icones_skills/Aurora_W.png" },
-            { key: "E", name: "Estranheza", cooldown: 15, img: "imgs/Icones_skills/Aurora_E.png" },
-            { key: "R", name: "Entre mundos", cooldown: 140, img: "imgs/Icones_skills/Aurora_R.png" }
+            { key: "Q", name: "Feitiço dúplice", cooldown: 9, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AuroraQ.png" },
+            { key: "W", name: "Através do véu", cooldown: 22, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AuroraW.png" },
+            { key: "E", name: "Estranheza", cooldown: 15, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AuroraE.png" },
+            { key: "R", name: "Entre mundos", cooldown: 140, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AuroraR.png" }
         ]
     },
     {
