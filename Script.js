@@ -1,4 +1,4 @@
-
+// champions Data
 const champions = [
     {
         name: "Ahri",
@@ -82,7 +82,7 @@ const champions = [
     }
 ];
 
-// Elementos HTML
+// HTML elements
 const homePage = document.getElementById('homePage');
 const gamePage = document.getElementById('gamePage');
 const startBtn = document.getElementById('startBtn');
@@ -95,13 +95,13 @@ const abilityIcon = document.querySelector('.ability-icon');
 const question = document.querySelector('.question');
 const champBg = document.getElementById('champBg');
 
-// Progresso de cada campeão
+// Champion progress tracking
 let championProgress = champions.map(() => []);
 let currentChampionIndex = null;
 let currentChampion = null;
 let currentSkill = null;
 
-// Inicia o jogo
+// Starts the game
 startBtn.addEventListener('click', () => {
     homePage.style.display = 'none';
     gamePage.style.display = 'flex';
@@ -114,19 +114,19 @@ answerInput.addEventListener('keypress', (e) => {
 });
 
 function startNewChampion() {
-    // Filtra campeões que ainda têm skills não perguntadas
+    // Filters champions that still have unasked skills
     const availableChampionIndexes = championProgress
         .map((skills, idx) => skills.length < champions[idx].skills.length ? idx : null)
         .filter(idx => idx !== null);
 
-    // Se todos os campeões já foram, reinicia o progresso
+    // Restarts progress if all champions were completed
     if (availableChampionIndexes.length === 0) {
         championProgress = champions.map(() => []);
         startNewChampion();
         return;
     }
 
-    // Sorteia entre os campeões disponíveis
+    // Sorts between available champions, avoiding repetition
     let nextChampionIndex;
     do {
         nextChampionIndex = availableChampionIndexes[Math.floor(Math.random() * availableChampionIndexes.length)];
@@ -141,13 +141,13 @@ function startNewChampion() {
 function startNewRound() {
     const askedSkills = championProgress[currentChampionIndex];
 
-    // Se todas as skills já foram perguntadas desse campeão, troca de campeão
+    // IF to check if all skills were asked
     if (askedSkills.length === currentChampion.skills.length) {
         startNewChampion();
         return;
     }
 
-    // Seleciona uma skill ainda não perguntada
+    // Selects a random unasked skill
     const remainingSkills = currentChampion.skills
         .map((skill, i) => ({ skill, index: i }))
         .filter(({ index }) => !askedSkills.includes(index));
@@ -163,14 +163,14 @@ function startNewRound() {
 }
 
 function checkAnswer() {
-    // Aceita ponto ou vírgula como separador decimal
+    // Adapt input for decimal commas
     const userAnswer = parseFloat(answerInput.value.replace(',', '.'));
     if (isNaN(userAnswer)) {
         alert("Por favor, insira um número válido!");
         return;
     }
 
-    // Margem de erro para comparação de decimais
+    // Error margin for float comparison
     const epsilon = 0.01;
     if (Math.abs(userAnswer - currentSkill.cooldown) < epsilon) {
         resultImage.src = "imgs/Dea/Dea_Feliz.png";

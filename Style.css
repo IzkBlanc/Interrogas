@@ -79,7 +79,7 @@
             border-radius: 20px;
         }
         
-        /* css da página do jogo */
+        /* Game page CSS */
         .game-container {
             position: relative;
             display: flex;
@@ -158,7 +158,7 @@
             background-color: #3aa371;
         }
         
-        /*resultados*/
+        /*results*/
         .result-container {
             display: none;
             align-items: center;
