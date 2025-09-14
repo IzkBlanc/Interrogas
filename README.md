@@ -11,9 +11,9 @@ Mirando sempre na simpliscidade; fazendo sempre com prazer.
 ## 🔍 Funcionalidades
 
 - Exibe perguntas específicas sobre campeões;
-- Mostra se sua resposta está certa ou errada.
+- Mostra se sua resposta está certa ou errada;
 - Visual limpo e focado na experiência do usuário.
-- ⚠️ No momento, apenas alguns campeões estão disponível = 6. Mais recente: Aurora
+- ⚠️ No momento, apenas alguns campeões estão disponível = 6. Mais recente: Aurora.
 
 ## 🔧 Tecnologias utilizadas
 
@@ -22,6 +22,7 @@ Projeto desenvolvido com:
 - HTML5
 - CSS3
 - JavaScript
+- Postimage (Image stock)
 
 ## 🚧 Em construção
 
