@@ -79,6 +79,16 @@ const champions = [
             { key: "E", name: "shunpo", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/KatarinaEWrapper.png" },
             { key: "R", name: "lótus da morte", cooldown: 75, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/KatarinaR.png" }
         ]
+    },
+    {
+        name: "Orianna",
+        splash: "https://i.postimg.cc/bv0tF5Vy/Orianna.jpg",
+        skills: [
+            { key: "Q", name: "Atacar", cooldown: 6, img: "https://ddragon.leagueoflegends.com/cdn/15.19.1/img/spell/OrianaIzunaCommand.png" },
+            { key: "W", name: "Pulsar", cooldown: 7, img: "https://ddragon.leagueoflegends.com/cdn/15.19.1/img/spell/OrianaDissonanceCommand.png" },
+            { key: "E", name: "Defender", cooldown: 9, img: "https://ddragon.leagueoflegends.com/cdn/15.19.1/img/spell/OrianaRedactCommand.png" },
+            { key: "R", name: "Onda de choque", cooldown: 110, img: "https://ddragon.leagueoflegends.com/cdn/15.19.1/img/spell/OrianaDetonateCommand.png" }
+        ]
     }
 ];
 
