@@ -1,5 +1,7 @@
+
 // champions Data
 const champions = [
+    // champions data
     {
         name: "Ahri",
         splash: "https://i.postimg.cc/kGSzRqBV/Ahri.webp",
@@ -89,11 +91,61 @@ const champions = [
             { key: "E", name: "Defender", cooldown: 9, img: "https://ddragon.leagueoflegends.com/cdn/15.19.1/img/spell/OrianaRedactCommand.png" },
             { key: "R", name: "Onda de choque", cooldown: 110, img: "https://ddragon.leagueoflegends.com/cdn/15.19.1/img/spell/OrianaDetonateCommand.png" }
         ]
-    }
+    },
+    {
+        name: "Syndra",
+        splash: "https://i.postimg.cc/3xZs8m2P/Syndra.webp",
+        skills: [
+            { key: "Q", name: "Bola de fogo", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/SyndraQ.png" },
+            { key: "W", name: "Círculo de energia", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/SyndraW.png" },
+            { key: "E", name: "Crescimento de espinhos", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/SyndraE.png" },
+            { key: "R", name: "Maldição do caos", cooldown: 90, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/SyndraR.png" }
+        ]
+    },
+    {
+        name: "Viktor",
+        splash: "https://i.postimg.cc/3xZs8m2P/Viktor.webp",
+        skills: [
+            { key: "Q", name: "Fogo de artifício", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ViktorQ.png" },
+            { key: "W", name: "Círculo de energia", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ViktorW.png" },
+            { key: "E", name: "Crescimento de espinhos", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ViktorE.png" },
+            { key: "R", name: "Maldição do caos", cooldown: 90, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ViktorR.png" }
+        ]
+    },
+    {
+        name: "Veigar",
+        splash: "https://i.postimg.cc/3xZs8m2P/Veigar.webp",
+        skills: [
+            { key: "Q", name: "Balão de poder", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/VeigarBalefulStrike.png" },
+            { key: "W", name: "nome da habilidade desconecido", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/VeigarDarkMatter.png" },
+            { key: "E", name: "nome da habilidade desconecido", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/VeigarEventHorizon.png" },
+            { key: "R", name: "nome da habilidade desconecido", cooldown: 90, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/VeigarPrimordialBurst.png" }
+        ]
+    },
+    {
+        name: "Ziggs",
+        splash: "https://i.postimg.cc/3xZs8m2P/Ziggs.webp",
+        skills: [
+            { key: "Q", name: "Bomba de mão", cooldown: 6, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZiggsQ.png" },
+            { key: "W", name: "Bomba de pilha", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZiggsW.png" },
+            { key: "E", name: "Bomba de salto", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZiggsE.png" },
+            { key: "R", name: "Bomba mega explosiva", cooldown: 120, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/ZiggsR.png" }
+        ]
+    },
+    {
+        name:"Brand",
+        splash: "https://i.postimg.cc/3xZs8m2P/Brand.webp",
+        skills: [
+            { key: "Q", name: "Bola de fogo", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/BrandQ.png" },
+            { key: "W", name: "Círculo de energia", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/BrandW.png" },
+            { key: "E", name: "Crescimento de espinhos", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/BrandE.png" },
+            { key: "R", name: "Maldição do caos", cooldown: 90, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/BrandR.png" }
+        ],
+    },
 ];
 
 // HTML elements
-const homePage = document.getElementById('homePage');
+const homePage = document.getElementById('homePage' );
 const gamePage = document.getElementById('gamePage');
 const startBtn = document.getElementById('startBtn');
 const answerInput = document.getElementById('answerInput');
@@ -124,19 +176,17 @@ answerInput.addEventListener('keypress', (e) => {
 });
 
 function startNewChampion() {
-    // Filters champions that still have unasked skills
     const availableChampionIndexes = championProgress
         .map((skills, idx) => skills.length < champions[idx].skills.length ? idx : null)
         .filter(idx => idx !== null);
 
-    // Restarts progress if all champions were completed
     if (availableChampionIndexes.length === 0) {
+        alert("Parabéns! Você completou todos os desafios. O jogo será reiniciado.");
         championProgress = champions.map(() => []);
         startNewChampion();
         return;
     }
 
-    // Sorts between available champions, avoiding repetition
     let nextChampionIndex;
     do {
         nextChampionIndex = availableChampionIndexes[Math.floor(Math.random() * availableChampionIndexes.length)];
@@ -144,20 +194,18 @@ function startNewChampion() {
 
     currentChampionIndex = nextChampionIndex;
     currentChampion = champions[currentChampionIndex];
-    champBg.src = currentChampion.splash; 
+    champBg.src = currentChampion.splash;
     startNewRound();
 }
 
 function startNewRound() {
     const askedSkills = championProgress[currentChampionIndex];
 
-    // IF to check if all skills were asked
     if (askedSkills.length === currentChampion.skills.length) {
         startNewChampion();
         return;
     }
 
-    // Selects a random unasked skill
     const remainingSkills = currentChampion.skills
         .map((skill, i) => ({ skill, index: i }))
         .filter(({ index }) => !askedSkills.includes(index));
@@ -165,7 +213,9 @@ function startNewRound() {
     currentSkill = randomSkillObj.skill;
     askedSkills.push(randomSkillObj.index);
 
-    abilityIcon.innerHTML = `<img src="${currentSkill.img}" alt="${currentChampion.name} ${currentSkill.key}" style="height:48px;" loading="lazy">`;
+    // upgrade change question and ability icon
+    abilityIcon.style.backgroundImage = `url('${currentSkill.img}')`;
+
     question.textContent = `Qual o tempo de recarga do (${currentSkill.key}) do(a) ${currentChampion.name}?`;
     answerInput.value = '';
     resultContainer.style.display = 'none';
@@ -173,14 +223,16 @@ function startNewRound() {
 }
 
 function checkAnswer() {
-    // Adapt input for decimal commas
+    if (answerInput.value.trim() === '') {
+        alert("Por favor, insira um número.");
+        return;
+    }
     const userAnswer = parseFloat(answerInput.value.replace(',', '.'));
     if (isNaN(userAnswer)) {
         alert("Por favor, insira um número válido!");
         return;
     }
 
-    // Error margin for float comparison
     const epsilon = 0.01;
     if (Math.abs(userAnswer - currentSkill.cooldown) < epsilon) {
         resultImage.src = "imgs/Dea/Dea_Feliz.png";
@@ -190,10 +242,10 @@ function checkAnswer() {
     } else {
         resultImage.src = "imgs/Dea/Dea_Triste.png";
         resultImage.alt = "Dea triste";
-        resultMessage.textContent = `Resposta errada! paia. O tempo correto era ${currentSkill.cooldown}s.`;
+        resultMessage.textContent = `Quase! O tempo correto era ${currentSkill.cooldown}s.`;
         resultMessage.style.color = "#f04747";
     }
 
-        resultContainer.style.display = 'flex';
-        setTimeout(startNewRound, 1500);
-    }
+    resultContainer.style.display = 'flex';
+    setTimeout(startNewRound, 2000); 
+}
