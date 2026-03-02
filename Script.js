@@ -94,7 +94,7 @@ const champions = [
     },
     {
         name: "Syndra",
-        splash: "https://i.postimg.cc/3xZs8m2P/Syndra.webp",
+        splash: "https://i.postimg.cc/8zFkFZwL/Syndra.jpg",
         skills: [
             { key: "Q", name: "Bola de fogo", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/SyndraQ.png" },
             { key: "W", name: "Círculo de energia", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/SyndraW.png" },
@@ -114,7 +114,7 @@ const champions = [
     },
     {
         name: "Veigar",
-        splash: "https://i.postimg.cc/3xZs8m2P/Veigar.webp",
+        splash: "https://i.postimg.cc/QxVB8Z1t/veigar.jpg",
         skills: [
             { key: "Q", name: "Balão de poder", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/VeigarBalefulStrike.png" },
             { key: "W", name: "nome da habilidade desconecido", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/VeigarDarkMatter.png" },
@@ -142,6 +142,16 @@ const champions = [
             { key: "R", name: "Maldição do caos", cooldown: 90, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/BrandR.png" }
         ],
     },
+    {
+        name:"Annie",
+        splash: "https://i.postimg.cc/3xZs8m2P/Annie.jpg",
+        skills: [
+            { key: "Q", name: "Bola de fogo", cooldown: 10, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AnnieQ.png" },
+            { key: "W", name: "Círculo de energia", cooldown: 12, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AnnieW.png" },
+            { key: "E", name: "Crescimento de espinhos", cooldown: 8, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AnnieE.png" },
+            { key: "R", name: "Maldição do caos", cooldown: 90, img: "https://ddragon.leagueoflegends.com/cdn/15.16.1/img/spell/AnnieR.png" }
+        ],
+    }
 ];
 
 // HTML elements
