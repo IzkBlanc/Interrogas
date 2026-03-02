@@ -30,6 +30,7 @@ Essa é apenas uma amostra do que está por vir. Futuramente irei incluir (com c
 
 - Novos campeões;
 - Escolha de campeões de rotas especificas;
+- trabalhar E FOCAR na otimização do site
 * E outras "viajadas" que eu der e quiser incluir *
 
 Acesse o projeto online:  
